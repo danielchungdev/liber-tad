@@ -9,8 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        libre: ["LibreBaskerville", "sans-serif"],
-        source: ["SourceSansPro", "serif"]
+        libre: ["LibreBaskerville", "serif"],
+        source: ["SourceSansPro", "sans-serif"]
       },
       fontSize: {
         'header': '32px',
