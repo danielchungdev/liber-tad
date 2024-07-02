@@ -22,7 +22,12 @@ const config: Config = {
         'background': '#F9F8F6',
         'primary': '#9C8B68',
         'secondary': '#B3C7A9',
-        'accent': '#8AB28E'
+        'accent': '#8AB28E',
+        'darkText': '#EFECE6',
+        'darkBackground':'#090806',
+        'darkPrimary': '#978663',
+        'darkSecondary': '#978663',
+        'darkAccent': '#4D7551'
       },
     },
   },
