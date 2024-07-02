@@ -4,20 +4,18 @@ interface LogoProps {
     size?: "sm" | "lg"
 }
 
-export const Logo: FC<LogoProps> = ({ size="lg" }) => {
+export const Logo: FC<LogoProps> = ({ size = "lg" }) => {
 
     const determineSize = (size: string) => {
-        switch(size){
+        switch (size) {
             case "sm":
-                return "48px"
+                return "text-[48px]"
             case "lg":
-                return "64px"
+                return "text-[64px]"
         }
     }
-    
+
     return (
-        <div className={`font-libre italic text-[${determineSize(size)}]`}>
-            <p><span className="text-primary ">Liber</span>-tad</p>
-        </div>
+        <p className={`font-libre italic ${determineSize(size)}`}><span className="text-primary ">Liber</span>-tad</p>
     )
 }

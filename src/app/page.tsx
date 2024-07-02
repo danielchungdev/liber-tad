@@ -1,4 +1,5 @@
 import { Logo } from "@/components/Logo";
+import { SearchBar } from "@/components/SearchBar";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <p className="text-paragraph font-source">Hello world</p>
       <p className="text-small-body">Hello world</p>
       <Logo/>
+      <SearchBar/>
     </main>
   );
 }
