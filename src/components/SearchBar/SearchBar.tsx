@@ -18,9 +18,9 @@ export const SearchBar: FC<SearchBarProps> = ({ width = "lg", className }) => {
     }
 
     return (
-        <div className={`flex items-center ${determineWidth(width)} border border-solid border-text p-2 rounded-full px-4 ${className}`}>
+        <div className={`flex items-center ${determineWidth(width)} border border-solid border-text rounded-full px-5 ${className}`}>
             <IoSearchOutline className="h-5 w-5 mr-2" />
-            <input className="outline-none flex-grow font-source py-1 bg-background" type="text" placeholder="Enter your books name and hit enter!" />
+            <input className="outline-none flex-grow font-source py-3 bg-background" type="text" placeholder="Enter your books name and hit enter!" />
         </div>
     )
 }
