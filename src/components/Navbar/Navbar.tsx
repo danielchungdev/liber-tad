@@ -10,23 +10,19 @@ interface NavbarProps {
 
 export const Navbar: FC<NavbarProps> = ({ type = "landing", className }) => {
 
-    const [darkMode, setDarkMode] = useState<boolean>(false);
-
-    const handleDarkMode = () => {
-        setDarkMode(!darkMode)
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark')
-            localStorage.theme = 'dark'
-
-        } else {
-            document.documentElement.classList.remove('dark')
-            localStorage.theme = 'light'
-
+    const defineSize = (type: string): string => {
+        switch(type){
+            case "landing":
+                return "text-small-body"
+            case "general":
+                return "text-paragraph"
+            default:
+                return "text-small-body"
         }
     }
 
     const landing = (
-        <div className={`flex ${className} text-small-body`}>
+        <div className={`flex ${className} ${defineSize(type)}`}>
             <p className="mr-3">About</p>
             <p>Favorites</p>
         </div>
