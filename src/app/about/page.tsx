@@ -10,7 +10,8 @@ export default function AboutHome() {
                 <div className="my-4 mx-auto w-2/5  font-source text-paragraph">
                     <section>
                         <h1 className="text-header font-libre mb-4">About</h1>
-                        <p>This website is for the Troy Web Development technical assessment. Due to the timelimit I was unable to make it mobile responsive, in the future will keep in mind to design mobile first then. That being said I was able to accomplish all the features that were required and adding the bonus requirements. On top of that I also came up with a very interesting way of developing this application, however, it wouldn't have satisfied a lot of the features that were required, so instead I had to scratch it and work on this simpler interface. That being said I will attach a small demo of what it looked like as I think it was very interesting.</p>
+                        <p className="mb-2"><i>Liber</i> stands for "book" in Latin and <i>libertad</i> in Spanish means "freedom". So the name stands for the freedom of books as I believe education should be free.</p>
+                        <p>This website is for the Troy Web Development technical assessment. Due to the time limit, I was unable to make it mobile responsive, in the future I will keep in mind to design mobile first. That being said I was able to accomplish all the features that were required and add the bonus requirements. On top of that, I also came up with a interesting way of developing this application, however, it wouldn't have satisfied a lot of the features that were required, so instead, I had to scratch it and work on this simpler interface. I will attach a small demo of what it looked like as I think it was interesting.</p>
                     </section>
                     <section>
                         <h1 className="text-header font-libre my-4">User Flow</h1>
@@ -19,12 +20,12 @@ export default function AboutHome() {
                     </section>
                     <section>
                         <h1 className="text-header font-libre my-4">Design System</h1>
-                        <p className="mb-2">Here's the design system to follow throughout the application, ended up changing the way tags look as it had poor readability.</p>
+                        <p className="mb-2">Here's the design system to follow throughout the application, I ended up changing the way tags look as it had poor readability.</p>
                         <Image className="m-auto" src="/images/Design-system.png" height={200} width={700} alt={"Design system for the app"}/>
                     </section>
                     <section>
                         <h1 className="text-header font-libre my-4">Wireframes</h1>
-                        <p className="mb-2">Here's the wireframes for the application. Ended up ditching the mobile implementation as for time constraints.</p>
+                        <p className="mb-2">Here are the wireframes for the application. I Ended up ditching the mobile implementation as for time constraints.</p>
                         <Image className="m-auto" src="/images/wireframes.png" height={200} width={700} alt={"Wireframes for the app"}/>
                     </section>
                     <section>

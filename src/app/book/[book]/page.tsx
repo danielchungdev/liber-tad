@@ -28,8 +28,6 @@ export default function BookPage({ params }: { params: { book: string } }) {
     setup()
   }, [])
 
-  console.log(books)
-
   return (
     <main>
       <div className="mx-40">
