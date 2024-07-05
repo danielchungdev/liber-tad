@@ -10,7 +10,11 @@ import { IoMdDownload } from "react-icons/io";
 
 export default function BookPage({ params }: { params: { book: string } }) {
 
-  const { data, loading, error, fetchData } = useFetch<Book>()
+  const {
+    data,
+    loading,
+    fetchData
+  } = useFetch<Book>()
 
   useEffect(() => {
     const setup = async () => {
