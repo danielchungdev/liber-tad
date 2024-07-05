@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Liber-tad (Troy Web Consulting technical Assessment)
 
-## Getting Started
+If you don't want to install everything it's hosted [libertad.danielchung.dev](https://libertad.danielchung.dev/)
 
-First, run the development server:
+Liber stands for "book" in Latin and libertad in Spanish means "freedom". So the name stands for the freedom of books as I believe education should be free.
+
+This website is for the Troy Web Development technical assessment. Due to the time limit, I was unable to make it mobile responsive, in the future I will keep in mind to design mobile first. That being said I was able to accomplish all the features that were required and add the bonus requirements. On top of that, I also came up with a interesting way of developing this application, however, it wouldn't have satisfied a lot of the features that were required, so instead, I had to scratch it and work on this simpler interface. I will attach a small demo of what it looked like as I think it was interesting. (This can be found in the abbout page [here](https://libertad.danielchung.dev/about) or you can keep reading below).
+
+## Completed
+
+### Requirements
+All requirements where completed.
+- [x] Build a frontend application
+- [x] Features  
+
+### Bonus
+- [x] Add the ability to favorite a Book, adding it to a list where a user can view all saved books
+- [ ] Use a modal to display the Book’s Details
+- [ ] Use CSS Animations to animate the entry of Books as they return from the API
+- [x] Display a loading indicator during any API requests
+- [x] Add a frontend unit test
+
+## How to run app
+
+First, clone the repo
+```bash
+git clone https://github.com/danielchungdev/liber-tad.git
+```
+
+Second, move into the directory
+```bash
+cd liber-tad
+```
+
+Third, install depedencies
+```bash
+npm install
+```
+
+Lastly, run the app
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Extra content
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Userflow
+![userflow](/public/images/userflow.png)
 
-## Learn More
+### Design System
+![designsystem](/public/images/Design-system.png)
 
-To learn more about Next.js, take a look at the following resources:
+### Wireframes
+![wireframes](/public/images/wireframes.png)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Final Design
+![userflow](/public/images/Designs.png)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Potential Application
+![potentialapp](/public/gif/original-idea.gif)
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Branching Strategy
+![branchingstrategy](/public/images/branches.png)
