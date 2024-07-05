@@ -11,7 +11,7 @@ export default function Home() {
       <div className="grid place-content-center h-[70vh]">
         <Logo className="text-center"/>
         <SearchBar className="mb-4"/>
-        <p className="text-center">Not sure what to read? <Link href={"/books"} className="text-primary hover:text-accent transition duration-700 ease-in-out">Click here to browse</Link></p>
+        <p className="text-center" data-testid="pointer">Not sure what to read? <Link href={"/books"} className="text-primary hover:text-accent transition duration-700 ease-in-out">Click here to browse</Link></p>
       </div>
       <Footer/>
     </main>

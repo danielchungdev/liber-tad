@@ -39,8 +39,7 @@ export default function AboutHome() {
                     </section>
                     <section>
                         <h1 className="text-header font-libre my-4">Branching Strategy</h1>
-                        <p className="mb-2">For branching strategy I went with the standard master, development and feature branches. Only commiting to master after a completing a feature(pages)</p>
-
+                        <p className="mb-2">For branching strategy I went with the standard master, development and feature branches. Only commiting to master after a completing a feature(pages).</p>
                         <Image className="m-auto" src="/images/branches.png" height={200} width={700} alt={"Final design for the app"} />
                     </section>
                 </div>
