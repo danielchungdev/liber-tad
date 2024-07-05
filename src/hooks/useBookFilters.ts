@@ -12,8 +12,13 @@ export const useBookFilters = () => {
     const [subjectFilters, setSubjectFilters] = useState<string[]>([])
     const [authorFilters, setAuthorFilters] = useState<{ start: number, end: number }>({ start: 0, end: 0 })
     const [downloadFilter, setDownloadFilters] = useState<{ start: number, end: number }>({ start: 0, end: 0 })
+    const [filter, setFilter] = useState<boolean>(false)
 
     const searchParams = useSearchParams()
+
+    const handleFilter = () => {
+        setFilter((filter) => !filter)
+    }
 
     useEffect(() => {
         const page = searchParams.get("page") ?? "1"
@@ -117,5 +122,7 @@ export const useBookFilters = () => {
         handleDownload,
         applyFilters,
         handleClearFilters,
+        filter, 
+        handleFilter
     }
 }

@@ -50,8 +50,8 @@ export const FilterComponent = ({
                         <p>End date:</p>
                     </div>
                     <div className="w-full">
-                        <input className="border-2" name="start" type="number" value={authorFilters.start} onChange={handleAuthorLife} />
-                        <input className="border-2" name="end" type="number" value={authorFilters.end} onChange={handleAuthorLife} />
+                        <input className="border-2 px-2" name="start" type="number" value={authorFilters.start} onChange={handleAuthorLife} />
+                        <input className="border-2 px-2" name="end" type="number" value={authorFilters.end} onChange={handleAuthorLife} />
                     </div>
                 </div>
             </div>
@@ -63,8 +63,8 @@ export const FilterComponent = ({
                         <p>End count:</p>
                     </div>
                     <div className="w-full">
-                        <input className="border-2" name="start" type="number" value={downloadFilter.start} onChange={handleDownload} />
-                        <input className="border-2" name="end" type="number" value={downloadFilter.end} onChange={handleDownload} />
+                        <input className="border-2 px-2" name="start" type="number" value={downloadFilter.start} onChange={handleDownload} />
+                        <input className="border-2 px-2" name="end" type="number" value={downloadFilter.end} onChange={handleDownload} />
                     </div>
                 </div>
             </div>

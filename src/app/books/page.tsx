@@ -5,6 +5,7 @@ import { BooksGrid } from "@/components/BooksGrid"
 import { Pagination } from "@/components/Pagination"
 import { useBookFilters } from "@/hooks/useBookFilters"
 import { FilterComponent } from "@/components/FilterComponent"
+import { MdFilterAlt, MdFilterAltOff } from "react-icons/md";
 
 export default function BooksPage() {
 
@@ -25,29 +26,47 @@ export default function BooksPage() {
         handleDownload,
         applyFilters,
         handleClearFilters,
+        filter, 
+        handleFilter
     } = useBookFilters();
+
 
     return (
         <main>
             <div className="mx-40">
                 <Navbar type="general" />
                 <div className="mt-10">
-                    <p className="font-source text-header font-semibold mb-3">Books <span className="text-paragraph">(found {data?.count} books)</span></p>
+                    <div className="font-source text-header font-semibold mb-3">
+                        <p className="inline mr-2">Books</p>
+                        <span className="text-paragraph">(found {data?.count} books)</span>
+                        <button onClick={handleFilter}>
+                            {
+                                filter ? 
+                                <MdFilterAltOff className="h-7 w-7 inline ml-5" /> :
+                                <MdFilterAlt className="h-7 w-7 inline ml-5" />
+
+                            }
+                        </button>
+                    </div>
                 </div>
-                <FilterComponent
-                    subjectFilters={subjectFilters}
-                    authorFilters={authorFilters}
-                    downloadFilter={downloadFilter}
-                    applyFilters={applyFilters}
-                    handleClearFilters={handleClearFilters}
-                    subjects={subjects}
-                    handleSubjectChange={handleSubjectChange}
-                    handleAuthorLife={handleAuthorLife}
-                    handleDownload={handleDownload}
-                    setSubjectFilters={setSubjectFilters}
-                    setAuthorFilters={setAuthorFilters}
-                    setDownloadFilters={setDownloadFilters}
-                />
+                {
+                    filter &&
+                    <FilterComponent
+                        subjectFilters={subjectFilters}
+                        authorFilters={authorFilters}
+                        downloadFilter={downloadFilter}
+                        applyFilters={applyFilters}
+                        handleClearFilters={handleClearFilters}
+                        subjects={subjects}
+                        handleSubjectChange={handleSubjectChange}
+                        handleAuthorLife={handleAuthorLife}
+                        handleDownload={handleDownload}
+                        setSubjectFilters={setSubjectFilters}
+                        setAuthorFilters={setAuthorFilters}
+                        setDownloadFilters={setDownloadFilters}
+                    />
+                }
+
                 {
                     loading ? <Loader /> : <BooksGrid data={fileteredResults} />
                 }
