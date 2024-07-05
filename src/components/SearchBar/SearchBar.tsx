@@ -12,7 +12,7 @@ export const SearchBar: FC<SearchBarProps> = ({ width = "lg", className }) => {
 
     const [value, setValue] = useState<string>("");
     const router = useRouter()
-
+    
     const determineWidth = (width: string) => {
         switch (width) {
             case "sm":
