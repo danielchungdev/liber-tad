@@ -1,5 +1,5 @@
 "use client"
-import { FC, useState } from "react"
+import { FC } from "react"
 import { Logo } from "../Logo"
 import { SearchBar } from "../SearchBar"
 import Link from "next/link"
@@ -25,7 +25,8 @@ export const Navbar: FC<NavbarProps> = ({ type = "landing", className }) => {
     const landing = (
         <div className={`flex ${className} ${defineSize(type)}`}>
             <Link href="/about" className="mr-3">About</Link>
-            <Link href="/favorites">Favorites</Link>
+            <Link href="/favorites" className="mr-3">Favorites</Link>
+            <Link href="/books">Browse</Link>
         </div>
     )
 
