@@ -2,6 +2,7 @@
 import { FC, useState } from "react"
 import { Logo } from "../Logo"
 import { SearchBar } from "../SearchBar"
+import Link from "next/link"
 
 interface NavbarProps {
     type?: "landing" | "general",
@@ -23,8 +24,8 @@ export const Navbar: FC<NavbarProps> = ({ type = "landing", className }) => {
 
     const landing = (
         <div className={`flex ${className} ${defineSize(type)}`}>
-            <p className="mr-3">About</p>
-            <p>Favorites</p>
+            <Link href="/about" className="mr-3">About</Link>
+            <Link href="/favorites">Favorites</Link>
         </div>
     )
 
