@@ -23,7 +23,7 @@ export const Navbar: FC<NavbarProps> = ({ type = "landing", className }) => {
     }
 
     const landing = (
-        <div className={`flex ${className} ${defineSize(type)}`}>
+        <div className={`flex ${className} ${defineSize(type)}`} data-testid="landing-navbar">
             <Link href="/about" className="mr-3">About</Link>
             <Link href="/favorites" className="mr-3">Favorites</Link>
             <Link href="/books">Browse</Link>
@@ -31,7 +31,7 @@ export const Navbar: FC<NavbarProps> = ({ type = "landing", className }) => {
     )
 
     const general = (
-        <div className={`flex justify-between ${className}`}>
+        <div className={`flex justify-between ${className}`} data-testid="general-navbar">
             <div className="flex">
                 <Logo size="sm" />
                 <div className="my-auto mx-10">

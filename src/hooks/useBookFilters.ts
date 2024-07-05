@@ -2,9 +2,9 @@ import { useState, useEffect, ChangeEvent } from "react";
 import { Book } from "@/types/Book";
 import { BookDataFormat } from "@/types/BookDataFormat";
 import useFetch from "@/hooks/useFetch";
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams, ReadonlyURLSearchParams } from 'next/navigation';
 
-export const useBookFilters = () => {
+export const useBookFilters = (searchParams: ReadonlyURLSearchParams) => {
     const { data, loading, fetchData } = useFetch<BookDataFormat>();
     const [currentPage, setCurrentPage] = useState<string>("1")
     const [fileteredResults, setFilteredResults] = useState<Book[] | undefined>();
@@ -13,8 +13,6 @@ export const useBookFilters = () => {
     const [authorFilters, setAuthorFilters] = useState<{ start: number, end: number }>({ start: 0, end: 0 })
     const [downloadFilter, setDownloadFilters] = useState<{ start: number, end: number }>({ start: 0, end: 0 })
     const [filter, setFilter] = useState<boolean>(false)
-
-    const searchParams = useSearchParams()
 
     const handleFilter = () => {
         setFilter((filter) => !filter)

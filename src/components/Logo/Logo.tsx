@@ -17,6 +17,6 @@ export const Logo: FC<LogoProps> = ({ size = "lg", className }) => {
     }
 
     return (
-        <Link href="/" className={`font-libre italic ${determineSize(size)} ${className}`}><span className="text-primary ">Liber</span>-tad</Link>
+        <Link href="/" className={`font-libre italic ${determineSize(size)} ${className}`} data-testid="logo"><span className="text-primary ">Liber</span>-tad</Link>
     )
 }
