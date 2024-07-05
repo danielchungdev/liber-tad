@@ -18,6 +18,7 @@ const useFetch = <T = unknown>(initialOptions?: AxiosRequestConfig) => {
       const response: AxiosResponse<T> = await axios(url, { ...initialOptions, ...options });
       setData(response.data);
       setError(null);
+      return response.data
     } catch (error) {
       setError(error as AxiosError);
       setData(null);
