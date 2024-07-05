@@ -1,4 +1,5 @@
 import { ChangeEvent } from "react";
+import { IoMdArrowUp, IoMdArrowDown } from "react-icons/io";
 
 interface FilterComponentProps {
     subjectFilters: string[];
@@ -13,6 +14,9 @@ interface FilterComponentProps {
     handleSubjectChange: (e: { target: { value: string } }) => void;
     handleAuthorLife: (e: ChangeEvent<HTMLInputElement>) => void;
     handleDownload: (e: ChangeEvent<HTMLInputElement>) => void;
+    sortBookAscDesc: (ascending: boolean) => void;
+    ascending: boolean;
+    handleAscending: () => void;
 }
 
 export const FilterComponent = ({
@@ -23,6 +27,8 @@ export const FilterComponent = ({
     handleClearFilters,
     subjects,
     handleSubjectChange,
+    ascending,
+    handleAscending,
     handleAuthorLife,
     handleDownload,
 }: FilterComponentProps) => {
@@ -70,7 +76,8 @@ export const FilterComponent = ({
             </div>
             <div>
                 <button onClick={applyFilters} className="bg-accent block w-full py-1 rounded-lg hover:bg-accent/80 transition ease-in-out duration-500">Apply filters</button>
-                <button onClick={handleClearFilters} className="bg-primary block w-full mt-5 py-1 rounded-lg hover:bg-primary/80 transition ease-in-out duration-500">Clear filters</button>
+                <button onClick={handleAscending} className="bg-accent flex justify-center w-full my-2 py-1 rounded-lg hover:bg-accent/80 transition ease-in-out duration-500">Sort {ascending ? <IoMdArrowUp className="my-auto"/> : <IoMdArrowDown className="my-auto"/>}</button>
+                <button onClick={handleClearFilters} className="bg-primary block w-full  py-1 rounded-lg hover:bg-primary/80 transition ease-in-out duration-500">Clear filters</button>
             </div>
         </div>
     );

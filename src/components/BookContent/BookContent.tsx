@@ -6,6 +6,7 @@ import { BooksGrid } from "@/components/BooksGrid"
 import { Pagination } from "@/components/Pagination"
 import { Loader } from "@/components/Loader"
 import { MdFilterAlt, MdFilterAltOff } from "react-icons/md";
+import { useState } from 'react';
 
 export function BookContent() {
     const searchParams = useSearchParams();
@@ -18,6 +19,7 @@ export function BookContent() {
         downloadFilter,
         loading,
         data,
+        sortBookAscDesc,
         setSubjectFilters,
         setAuthorFilters,
         setDownloadFilters,
@@ -29,6 +31,13 @@ export function BookContent() {
         filter,
         handleFilter
     } = useBookFilters(searchParams);
+
+    const [ascending, setAscending] = useState<boolean>(true);
+
+    const handleAscending = () => {
+        setAscending(!ascending)
+        sortBookAscDesc(ascending)
+    }
 
     return (
         <>
@@ -60,6 +69,9 @@ export function BookContent() {
                     setSubjectFilters={setSubjectFilters}
                     setAuthorFilters={setAuthorFilters}
                     setDownloadFilters={setDownloadFilters}
+                    sortBookAscDesc={sortBookAscDesc}
+                    ascending={ascending}
+                    handleAscending={handleAscending}
                 />
             }
             {

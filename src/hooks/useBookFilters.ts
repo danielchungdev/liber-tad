@@ -96,6 +96,19 @@ export const useBookFilters = (searchParams: ReadonlyURLSearchParams) => {
         setFilteredResults(uniqueResults)
     }
 
+    function sortBookAscDesc(ascending: boolean = true): void {
+        const sortedBooks = fileteredResults?.sort((a, b) => {
+          const titleA = a.title.toLowerCase();
+          const titleB = b.title.toLowerCase();
+          
+          if (titleA < titleB) return ascending ? -1 : 1;
+          if (titleA > titleB) return ascending ? 1 : -1;
+          return 0;
+        });
+
+        setFilteredResults(sortedBooks)
+      }
+
     const handleClearFilters = () => {
         setFilteredResults(data?.results)
         setAuthorFilters({ start: 0, end: 0 })
@@ -107,6 +120,7 @@ export const useBookFilters = (searchParams: ReadonlyURLSearchParams) => {
         currentPage,
         fileteredResults,
         subjects,
+        sortBookAscDesc,
         subjectFilters,
         authorFilters,
         downloadFilter,
